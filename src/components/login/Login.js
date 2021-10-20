@@ -59,9 +59,9 @@ const Login = () => {
   });
   return (
     <Fragment>
-      <Button class={classes.btn}>
+      <button class={classes.btn}>
       <NavLink className={classes.demoLink} to='/demo-tracker'>Demo</NavLink>
-      </Button>
+      </button>
       <div className={classes.listOfAccounts}>{listOfAccounts}</div>
     </Fragment>
   );
