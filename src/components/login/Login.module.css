@@ -1,0 +1,45 @@
+.form {
+  display: block;
+  width: 25%;
+  height: auto;
+  border-radius: 5px;
+  text-align: center;
+  margin: 50px auto;
+  color: white;
+}
+
+.control {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.control label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.control input {
+  border-radius: 7px;
+  height: 40px;
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+
+.actions button {
+  display: block;
+  width: 50%;
+  height: 40px;
+  background-color: rgba(70, 136, 197, 0.5);
+  border-radius: 7px;
+  color: white;
+  margin: 20px auto;
+}
+
+.actions button:hover {
+  background-color: rgba(70, 136, 197, 1);
+}
+.actions button:disabled {
+  background-color: rgba(70, 136, 197, 0.5);
+  cursor: not-allowed;
+}

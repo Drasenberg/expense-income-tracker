@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Redirect, Route, Switch } from "react-router-dom";
+import "./App.css";
+import TrackerPage from "./pages/Tracker";
+import Layout from "./layout/Layout";
+import DemoTracker from "./pages/DemoTracker";
+import Logging from "./pages/Logging";
+import { authActions } from "./store/auth";
 
 function App() {
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(authActions.shouldBeLoggedIn());
+    return () => {
+      dispatch(authActions.logout());
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Layout>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to='/login-page' />
+          </Route>
+          <Route path="/demo-tracker">
+            <DemoTracker />
+          </Route>
+          <Route path="/tracker">
+            <TrackerPage />
+          </Route>
+          <Route path="/login-page"> 
+            <Logging />
+          </Route>
+        </Switch>
+      </Layout>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.price {
+  font-size: 20px;
+  color: black;
+}
+
+.expense-item {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 1px;
+  -webkit-box-shadow: 1px 5px 13px 9px rgba(0, 0, 0, 0.42);
+  box-shadow: 1px 5px 13px 9px rgba(0, 0, 0, 0.42);
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 12px;
+}
