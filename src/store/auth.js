@@ -12,9 +12,9 @@ const authSlice = createSlice({
   initialState: initialAuthState,
   reducers: {
     login(state, action) {
-      console.log(action);
       state.isLoggedIn = true;
       state.token = action.payload.idToken;
+      state.accountId = action.payload.localId;
       localStorage.setItem("accId", action.payload.localId);
       localStorage.setItem("token", state.token);
     },

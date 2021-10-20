@@ -1,5 +1,13 @@
+.listOfAccounts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: content;
+  width: 25%;
+  margin: 20px auto;
+}
 .form {
-  display: block;
   width: 25%;
   height: auto;
   border-radius: 5px;
