@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { loginAction } from "../../store/auth";
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { Fragment } from "react";
 import axios from "axios";
 import AcccountItem from "./accountItem/AccountItem";
 import classes from './Login.module.css';
+import Button from "../../UI/Button";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -58,6 +59,9 @@ const Login = () => {
   });
   return (
     <Fragment>
+      <Button class={classes.btn}>
+      <NavLink className={classes.demoLink} to='/demo-tracker'>Demo</NavLink>
+      </Button>
       <div className={classes.listOfAccounts}>{listOfAccounts}</div>
     </Fragment>
   );
